@@ -1,0 +1,16 @@
+{
+  "title": "Niels.im",
+  "url": "https://niels.im/",
+  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "feed": {
+    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://niels.im/feed/feed.xml",
+    "id": "https://niels.im/"
+  },
+  "author": {
+    "name": "Niels van Rongen",
+    "email": "website@niels.im"
+  }
+}
