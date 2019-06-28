@@ -17,7 +17,7 @@
     <header class="pagehead">
       <div class="pagehead-content">
         <a class="logo" href="{{ '/' | url }}">{{ metadata.title }}</a>
-        {# <nav class="top-nav">
+        <nav class="top-nav">
           <ul class="list-inline">
             {%- for nav in collections.nav | reverse -%}
             <li class="list-inline-item top-nav__item{% if nav.url == page.url %} top-nav__item--active{% endif %}">
@@ -25,14 +25,14 @@
             </li>
             {%- endfor -%}
           </ul>
-        </nav> #}
+        </nav>
       </div>
     </header>
     <main class="main flow{% if templateClass %} {{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
     <footer class="pagefoot">
-      &copy; {{ renderData.title or title or metadata.title }} 2019 | <a target="_blank" rel="me" href="https://mastodon.social/@nielsim">Mastodon</a>
+      &copy; 2019 | <a target="_blank" rel="me" href="https://mastodon.social/@nielsim">Mastodon</a>
     </footer>
     <!-- Current page: {{ page.url | url }} -->
   </body>
