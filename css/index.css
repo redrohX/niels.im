@@ -33,7 +33,7 @@ time, mark, audio, video {
  * --flow-space: The amount of space between siblings: Default 1em;
  */
 .flow {
-  --flow-space: 1em;
+  --flow-space: 1.5em;
 }
 
 .flow > * + * {
@@ -42,12 +42,18 @@ time, mark, audio, video {
 }
 
 body {
-  background-color: #001433;
+  --c-base: #fff;
+  --c-base-dark: #001433;
+  --c-brand-1: #d500ff;
+  --c-brand-2: #ffd085;
+
+  background-color: var(--c-base-dark);
   font-family: "PT Serif", serif;
   font-size: 18px;
-  color: #ffebcc;
+  color: var(--c-base);
   line-height: 1.6;
   margin: 0;
+  -webkit-font-smoothing: antialiased
 }
 
 strong {
@@ -59,11 +65,11 @@ em {
 }
 
 a {
-  color: #ffebcc;
+  color: var(--c-base);
 }
 
 a.link-alt {
-  color: #001433;
+  color: var(--c-base-dark);
 }
 
 main {
@@ -94,7 +100,7 @@ p {
 }
 @media (min-width: 640px) {
   .site-container {
-    font-size: 22px;
+    font-size: 1.3em;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "header header header header header header" ". main main main main ." "footer footer footer footer footer footer";
   }
@@ -145,7 +151,7 @@ p {
   grid-area: header;
   width: 100%;
   justify-self: center;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 3em;
 }
 
 .pagehead-content {
@@ -155,7 +161,7 @@ p {
 }
 
 .logo {
-  color: #ffd085;
+  color: var(--c-brand-2);
   line-height: 1.2;
   font-size: 1.4em;
   font-weight: 700;
@@ -163,11 +169,10 @@ p {
 }
 
 .top-nav__item:not(:first-child) {
-  margin-left: 0.3em;
+  margin-left: 0.5em;
 }
 
 .top-nav__link {
-  border-bottom: .1em solid #d500ff;
   text-decoration: none;
 }
 
@@ -209,14 +214,13 @@ p {
 }
 
 .post-summary {
-  background-color: #ffd085;
-  border-bottom: 0.25em solid;
-  color: #001433;
-  padding: 0.75em;
-  margin-bottom: 1em;
-}
-.post-summary:last-child {
-  margin-bottom: 0;
+  background-color: var(--c-brand-2);
+  border-radius: 4px;
+  color: var(--c-base-dark);
+  padding: 2em;
+  margin-bottom: 3em;
+  font-size: 1em;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.02), 1px 1px 15px 0 rgba(0, 0, 0, 0.03);
 }
 
 .post-summary__heading {
@@ -232,12 +236,12 @@ p {
 
 .post-summary__title {
   font-size: 1.4em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .post-summary__link {
   border-bottom: .1em solid;
-  color: #001433;
+  color: var(--c-base-dark);
   text-decoration: none;
 }
 
