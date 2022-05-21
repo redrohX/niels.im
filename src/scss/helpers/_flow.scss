@@ -1,0 +1,5 @@
+@use "../config";
+
+.flow > * + * {
+  margin-top: var(--flow-space, config.$flow-space);
+}

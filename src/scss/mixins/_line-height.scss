@@ -1,0 +1,5 @@
+@use "../functions";
+
+@mixin line-height($font-size) {
+  line-height: functions.strip-unit(($font-size * 1.618) - 1);
+}

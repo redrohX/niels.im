@@ -1,0 +1,19 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header role="banner">
+  <div class="container">
+    <div class="header-container">
+      <a href="/" aria-label="{{ site.name }} - home" class="logo">Niels.im</a>
+      <nav aria-label="Primary">
+        <div class="container">
+          <ul class="nav-items">
+            {% for item in navigation.items %}
+              <li class="nav-item">
+                <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

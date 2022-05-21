@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  {# Example of fetching external content #}
+  {# {% include "partials/studio.html" %} #}
+  <article>
+    <h1>{{ title | safe }}</h1>
+    {{ content | safe }}
+  </article>
+
+  {% include "partials/post-list.html" %}
+{% endblock %}

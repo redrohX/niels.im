@@ -1,0 +1,170 @@
+@use "mixins";
+@use "config";
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: config.$font-base-family;
+  font-size: config.$font-root-size;
+}
+
+body {
+  --body-background-color: #{config.$bgcolor-body-light};
+  --base-color: #{config.$color-text-light};
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-background-color);
+  color: var(--base-color);
+  font-size: config.$font-base-size;
+  @include mixins.line-height(config.$font-base-size);
+
+  @media (prefers-color-scheme: dark) {
+    --body-background-color: #{config.$bgcolor-body-dark};
+    --base-color: #{config.$color-text-dark};
+  }
+}
+
+a {
+  --link-color: #{config.$color-link-light};
+  --link-underline-color: #{config.$color-text-light};
+
+  color: var(--link-color);
+  text-decoration-color: var(--link-underline-color);
+  text-decoration-thickness: .08em;
+
+  @media (prefers-color-scheme: dark) {
+    --link-color: #{config.$color-link-dark};
+    --link-underline-color: #{config.$color-text-dark};
+  }
+}
+
+.skip-link {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  white-space: nowrap;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 1em;
+  text-decoration: none;
+
+  &:focus {
+    position: fixed;
+    width: auto;
+    height: auto;
+    clip: auto;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+header {
+  border-bottom: 4px solid currentColor;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
+nav {
+  padding: 0 2rem;
+}
+
+main {
+  max-width: 72rem;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+ul[class] {
+  list-style: none;
+  padding-left: 0;
+}
+
+.logo,
+strong,
+[role="doc-noteref"] {
+  font-family: config.$font-base-family-bold;
+}
+
+em {
+  font-family: config.$font-base-family-italic;
+}
+
+em strong,
+strong em {
+  font-family: config.$font-base-family-bolditalic;
+}
+
+h1 {
+  font-size: config.$font-base-size * 2.1;
+}
+
+h2 {
+  font-size: config.$font-base-size * 1.8;
+}
+
+h3 {
+  font-size: config.$font-base-size * 1.6;
+}
+
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+blockquote {
+  border-left: 4px solid currentColor;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+[role="doc-noteref"] {
+  font-size: 1.2rem;
+}
+
+[role="doc-endnotes"] {
+  --flow-space: 4rem;
+
+  padding: 2rem 0;
+  font-size: 1.6rem;
+  border-top: 1px solid currentColor;
+}
+
+footer {
+  margin-top: auto;
+  padding: 2rem;
+  border-top: 4px solid currentColor;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3.5rem;
+  color: var(--base-color);
+  text-decoration: none;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1rem;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
