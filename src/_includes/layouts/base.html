@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   {% include "partials/meta-info.html" %}
   <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+  <link href="https://github.com/redrohX" rel="me">
   <style>{% include "css/critical.css" %}</style>
 
   {# Add facility for pages to delare an array of critical styles #}
@@ -21,7 +22,7 @@
   {# Add facility for pages to declare an array of stylesheet paths #}
   {% if pageStylesheets %}
     {% for item in pageStylesheets %}
-      <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+      <link rel="stylesheet" media="print" href="/css/{{ item }}.css?{{ assetHash }}" onload="this.media='all'" />
     {% endfor %}
   {% endif %}
 </head>
