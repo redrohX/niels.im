@@ -5,30 +5,25 @@
 {# Render note date and any tags that this note has been filed under #}
 {% set pageHeaderSummary %}
 <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
-{% if tags %}
-<p class="visually-hidden" id="tags-desc">Tags that this note has been filed under.</p>
-<ul class="list-inline" aria-describedby="tags-desc">
-  {% for tag in tags %}
-  <li>
-    <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
-  </li>
-  {% endfor %}
-</ul>
-{% endif %}
 {% endset %}
 
 {% block content %}
-<article>
+<article class="note flow">
   {% include "partials/page-header.html" %}
   <div>
     {{ content | safe }}
   </div>
+  {% if link %}
+  <div class="note__link">Link: <a href="{{ link }}" rel="noopener">{{ link }}</a></div>
+  {% endif %}
 </article>
-<section class="flow">
-  <h3>Webmentions</h3>
-  {% set webmentionUrl %}
-    {{ page.url | url | absoluteUrl(site.url) }}
-  {% endset %}
-  {% include 'partials/webmentions.html' %}
-</section>
+<div class="flow">
+  <section>
+    <h3>Webmentions</h3>
+    {% set webmentionUrl %}
+      {{ page.url | url | absoluteUrl(site.url) }}
+    {% endset %}
+    {% include 'partials/webmentions.html' %}
+  </section>
+</div>
 {% endblock %}
