@@ -15,7 +15,7 @@
     "@11ty/eleventy": "^1.0.1",
     "lodash": "^4.17.21",
     "netlify-plugin-cache-folder": "^0.0.8",
-    "node-fetch": "^3.2.4"
+    "node-fetch": "^2.6.1"
   },
   "dependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
