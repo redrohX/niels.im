@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
-    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+    "build": "NODE_ENV=production npx @11ty/eleventy",
+    "build:local": "NODE_ENV=production netlify build",
+    "start": "netlify dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "lodash": "^4.17.21",
+    "netlify-plugin-cache-folder": "^0.0.8",
+    "node-fetch": "^2.6.1"
   },
   "dependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
@@ -23,7 +27,6 @@
     "gulp-sass": "^5.1.0",
     "html-minifier": "^4.0.0",
     "moment": "^2.29.3",
-    "node-fetch": "^2.6.7",
     "sass": "^1.52.1"
   }
 }

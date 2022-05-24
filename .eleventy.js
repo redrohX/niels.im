@@ -3,6 +3,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 // Filters
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
+const webMentionsFilters = require('./src/filters/webmentions')
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -19,6 +20,11 @@ module.exports = config => {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/fonts/');
+
+  Object.keys(webMentionsFilters).forEach(filterName => {
+    config.addFilter(filterName, webMentionsFilters[filterName])
+  })
+
   // Plugins
   config.addPlugin(rssPlugin);
 
@@ -30,6 +36,11 @@ module.exports = config => {
   // Returns a collection of blog posts in reverse date order
   config.addCollection('blog', collection => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+  });
+
+  // Returns a collection of notes in reverse date order
+  config.addCollection('notes', collection => {
+    return [...collection.getFilteredByGlob('./src/notes/*.md')].reverse();
   });
 
   // Only minify HTML if we are in production because it slows builds _right_ down

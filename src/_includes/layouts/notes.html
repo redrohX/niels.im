@@ -1,19 +1,20 @@
 {% extends "layouts/base.html" %}
 
+{% set pageStylesheets = ['global'] %}
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
-{% set postListItems = pagination.items %}
+{% set notesListItems = pagination.items %}
 
 {# If this is a tag, grab those items instead as one large collection #}
 {% if tag %}
-  {% set postListItems = collections[tag] %}
-  {% set pageHeaderTitle = 'Posts filed under “' + tag + '”' %}
+  {% set notesListItems = collections[tag] %}
+  {% set pageHeaderTitle = 'Notes filed under “' + tag + '”' %}
 {% endif %}
 
 {% block content %}
   <article>
     {% include "partials/page-header.html" %}
-    {% include "partials/post-list.html" %}
+    {% include "partials/notes-list.html" %}
 
     {# If we leave pagination in for tags, the next and prev links will
       link to tags and be rather confusing, so don't render in that situation #}

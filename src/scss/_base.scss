@@ -72,10 +72,6 @@ header {
   padding: 0 2rem;
 }
 
-nav {
-  padding: 0 2rem;
-}
-
 main {
   max-width: 72rem;
   margin: 4rem auto;
@@ -114,6 +110,22 @@ h3 {
   font-size: config.$font-base-size * 1.6;
 }
 
+.list-inline {
+  display: flex;
+  gap: 1rem;
+}
+
+.visually-hidden {
+  border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
 sup,
 sub {
   vertical-align: baseline;
@@ -139,7 +151,7 @@ blockquote {
   border-top: 1px solid currentColor;
 }
 
-footer {
+.site-footer {
   margin-top: auto;
   padding: 2rem;
   border-top: 4px solid currentColor;
