@@ -8,5 +8,11 @@
     {{ content | safe }}
   </article>
 
-  {% include "partials/post-list.html" %}
+  <section class="home-notes">
+    {% set notesListItems = collections.notes.slice(0, 10) %}
+    {% include "partials/notes-list.html" %}
+    <footer class="home-notes__footer">
+      <a href="/notes">More notes</a>
+    </footer>
+  </section>
 {% endblock %}

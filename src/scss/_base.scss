@@ -181,6 +181,11 @@ blockquote {
   margin-right: auto;
 }
 
+.home-notes__footer {
+  display: flex;
+  justify-content: end;
+}
+
 .post-list {
   margin: 0;
   list-style: none;
