@@ -12,7 +12,18 @@
       <h3 class="note__title">{{ item.data.title }}</h3>
     {% endif %}
     <div class="note__body">{{ item.data.content | safe }}</div>
-    <div class="note__date">{{ item.data.date | dateFilter }}</div>
+    <footer class="note__footer flow">
+      <div class="note__date">{{ item.data.date | dateFilter }}</div>
+      <div class="note__tags">
+        <ol class="note__tags">
+          {% for tag in item.data.tags %}
+            <li class="note__tag">
+              <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </footer>
   </li>
   {% endfor %}
 </ol>
