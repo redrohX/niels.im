@@ -7,9 +7,9 @@
   {% for item in notesListItems %}
   <li class="note flow">
     {% if item.data.link %}
-      <a class="note__title" href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a>
+    <h2 class="note__title"><a class="note__title" href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h2>
     {% else %}
-      <h3 class="note__title">{{ item.data.title }}</h3>
+      <h2 class="note__title">{{ item.data.title }}</h2>
     {% endif %}
     <div class="note__body">{{ item.data.content | safe }}</div>
     <footer class="note__footer flow">

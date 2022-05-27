@@ -17,7 +17,7 @@
   <div class="note__link">Link: <a href="{{ link }}" rel="noopener">{{ link }}</a></div>
   {% endif %}
 </article>
-<div class="flow">
+{# <div class="flow">
   <section>
     <h3>Webmentions</h3>
     {% set webmentionUrl %}
@@ -25,9 +25,9 @@
     {% endset %}
     {% include 'partials/webmentions.html' %}
   </section>
-</div>
+</div> #}
 
 {# https://brid.gy/about#webmentions #}
-<a hidden href="https://brid.gy/publish/mastodon"></a>
+{# <a hidden href="https://brid.gy/publish/mastodon"></a> #}
 
 {% endblock %}

@@ -15,6 +15,11 @@ const isProduction = process.env.NODE_ENV === 'production';
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 module.exports = config => {
+  const markdownIt = require("markdown-it");
+  const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
+  const markdownLib = markdownIt({}).use(markdownItImageLazyLoading);
+  config.setLibrary("md", markdownLib);
+
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);

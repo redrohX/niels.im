@@ -3,4 +3,4 @@ title: "Hello I'm Niels"
 layout: "layouts/home.html"
 metaDesc: 'The website of Niels van Rongen.'
 ---
-A front-end developer from Leiden, the Netherlands. This is my personal website. Currently I'm working on building accessible websites by using HTML, JavaScript and CSS. I position myself somewhere between design, marketing and development. I make sure a website is accessible, looks good, has excellent performance and is SEO optimized.
+I'm a front-end developer of accessible user interfaces from Leiden, the Netherlands. I currently work in a product team where we create software for mental health providers. I'm a metal, loud and alternative music connoisseur. This is my personal website where I share notes, ideas, thoughts and links.
