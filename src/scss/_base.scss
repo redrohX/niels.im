@@ -212,6 +212,12 @@ blockquote {
   margin-right: auto;
 }
 
+ol.footnotes-list {
+  list-style: number;
+  padding-inline: 1.3rem;
+  font-size: small;
+}
+
 .home-notes__footer {
   display: flex;
   justify-content: end;
