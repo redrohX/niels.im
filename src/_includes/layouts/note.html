@@ -8,15 +8,29 @@
 {% endset %}
 
 {% block content %}
-<article class="note flow">
-  {% include "partials/page-header.html" %}
-  <div>
-    {{ content | safe }}
-  </div>
-  {% if link %}
-  <div class="note__link">Link: <a href="{{ link }}" rel="noopener">{{ link }}</a></div>
-  {% endif %}
+<article class="note flow" {% if lang %}lang="{{lang}}"{% endif %}>
+  <header>
+    {% if link %}
+    <h1 class="note__title"><a class="note__title" href="{{ link }}" rel="noopener">{{ title }}</a></h1>
+    {% else %}
+      <h1 class="note__title">{{ title }}</h1>
+    {% endif %}
+  </header>
+  <div class="note__body">{{ content | safe }}</div>
+  <footer class="note__footer flow">
+    <div class="note__date">{{ date | dateFilter }}</div>
+    <div class="note__tags">
+      <ol class="note__tags">
+        {% for tag in tags %}
+          <li class="note__tag">
+            <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </footer>
 </article>
+
 {# <div class="flow">
   <section>
     <h3>Webmentions</h3>

@@ -5,25 +5,29 @@
 {% endif %}
 <ol class="notes-list flow">
   {% for item in notesListItems %}
-  <li class="note flow">
-    {% if item.data.link %}
-    <h2 class="note__title"><a class="note__title" href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h2>
-    {% else %}
-      <h2 class="note__title">{{ item.data.title }}</h2>
-    {% endif %}
-    <div class="note__body">{{ item.data.content | safe }}</div>
-    <footer class="note__footer flow">
-      <div class="note__date">{{ item.data.date | dateFilter }}</div>
-      <div class="note__tags">
-        <ol class="note__tags">
-          {% for tag in item.data.tags %}
-            <li class="note__tag">
-              <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
-            </li>
-          {% endfor %}
-        </ol>
-      </div>
-    </footer>
+  <li class="flow">
+    <article class="note flow" {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}>
+      <header>
+        {% if item.data.link %}
+        <h2 class="note__title"><a class="note__title" href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h2>
+        {% else %}
+          <h2 class="note__title">{{ item.data.title }}</h2>
+        {% endif %}
+      </header>
+      <div class="note__body">{{ item.data.content | safe }}</div>
+      <footer class="note__footer flow">
+        <div class="note__date">{{ item.data.date | dateFilter }}</div>
+        <div class="note__tags">
+          <ol class="note__tags">
+            {% for tag in item.data.tags %}
+              <li class="note__tag">
+                <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+      </footer>
+    </article>
   </li>
   {% endfor %}
 </ol>
