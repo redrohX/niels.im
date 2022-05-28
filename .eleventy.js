@@ -1,3 +1,9 @@
+// markdownIt
+const markdownIt = require("markdown-it");
+const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
+const markdownItFootnote = require('markdown-it-footnote')
+
+// RSS
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
 // Filters
@@ -15,13 +21,20 @@ const isProduction = process.env.NODE_ENV === 'production';
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 module.exports = config => {
-  const markdownIt = require("markdown-it");
-  const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
-  const markdownLib = markdownIt().use(markdownItImageLazyLoading, {
-    image_size: true,
-    decoding: true,
-    base_path: __dirname + '/src/',
-  });
+  const markdownLib = markdownIt()
+    .use(markdownItImageLazyLoading, {
+      image_size: true,
+      decoding: true,
+      base_path: __dirname + '/src/',
+    })
+    .use(markdownItFootnote);
+
+  // markdownLib.renderer.rules.footnote_block_open = () => (
+  //   '<hr>\n' +
+  //   'Footnotes\n' +
+  //   '<section class="footnotes">\n' +
+  //   '<ol class="footnotes-list">\n'
+  // );
   config.setLibrary("md", markdownLib);
 
   // Add filters

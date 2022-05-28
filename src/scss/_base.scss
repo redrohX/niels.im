@@ -133,6 +133,13 @@ h3 {
   font-size: config.$font-base-size * 1.6;
 }
 
+hr {
+  margin: 1rem auto;
+  height: 1px;
+  border: none;
+  background: var(--base-color);
+}
+
 .list-inline {
   display: flex;
   gap: 1rem;
@@ -154,6 +161,7 @@ sub {
   vertical-align: baseline;
   position: relative;
   top: -0.4em;
+  margin-left: .1em;
 }
 
 blockquote {
