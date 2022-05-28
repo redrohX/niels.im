@@ -17,7 +17,11 @@ const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 module.exports = config => {
   const markdownIt = require("markdown-it");
   const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
-  const markdownLib = markdownIt({}).use(markdownItImageLazyLoading);
+  const markdownLib = markdownIt().use(markdownItImageLazyLoading, {
+    image_size: true,
+    decoding: true,
+    base_path: __dirname + '/src/',
+  });
   config.setLibrary("md", markdownLib);
 
   // Add filters
