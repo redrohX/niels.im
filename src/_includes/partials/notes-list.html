@@ -7,14 +7,16 @@
   {% for item in notesListItems %}
   <li class="flow">
     <article class="note flow" {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}>
-      <header>
+      <header class="note__header">
         {% if item.data.link %}
-        <h2 class="note__title"><a class="note__title" href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h2>
+        <h2 class="note__title" id="{{ item.url }}"><a href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h2>
+        <a class="note__link note__link--internal" href="{{ item.url }}" aria-label="Go to {{item.data.title}} page"><span
+          aria-hidden="true">#</span></a>
         {% else %}
-          <h2 class="note__title">{{ item.data.title }}</h2>
+          <h2 class="note__title"><a class="note__title" href="{{ item.url }}">{{ item.data.title }}</a></h2>
         {% endif %}
       </header>
-      <div class="note__body">{{ item.data.content | safe }}</div>
+      <div class="note__body flow">{{ item.data.content | safe }}</div>
       <footer class="note__footer flow">
         <div class="note__date">{{ item.data.date | dateFilter }}</div>
         <div class="note__tags">

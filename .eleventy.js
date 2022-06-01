@@ -29,12 +29,10 @@ module.exports = config => {
     })
     .use(markdownItFootnote);
 
-  // markdownLib.renderer.rules.footnote_block_open = () => (
-  //   '<hr>\n' +
-  //   'Footnotes\n' +
-  //   '<section class="footnotes">\n' +
-  //   '<ol class="footnotes-list">\n'
-  // );
+  markdownLib.renderer.rules.footnote_block_open = () => (
+    '<section class="footnotes">\n' +
+    '<ol class="footnotes-list">\n'
+  );
   config.setLibrary("md", markdownLib);
 
   // Add filters
@@ -42,6 +40,9 @@ module.exports = config => {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/fonts/');
+  config.addFilter('log', value => {
+    console.log(value)
+  })
 
   Object.keys(webMentionsFilters).forEach(filterName => {
     config.addFilter(filterName, webMentionsFilters[filterName])
@@ -51,18 +52,32 @@ module.exports = config => {
   config.addPlugin(rssPlugin);
 
   // Returns articles items, sorted by display order
-  // config.addCollection('articles', collection => {
-  //   return sortByDisplayOrder(collection.getFilteredByGlob('./src/articles/*.md'));
-  // });
-
-  // Returns a collection of blog posts in reverse date order
-  config.addCollection('blog', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+  config.addCollection('articles', collection => {
+    return collection.getAll()
+      .filter(
+        item => !item.data.draft
+          && item.date <= new Date()
+          && item.data.type === 'article'
+      ).reverse()
   });
 
   // Returns a collection of notes in reverse date order
   config.addCollection('notes', collection => {
-    return [...collection.getFilteredByGlob('./src/notes/*.md')].reverse();
+    return [...collection.getFilteredByGlob('./src/notes/*.md')
+    .filter(
+      item => !item.data.draft
+        && item.date <= new Date()
+        // && item.data.type !== 'article'
+    )].reverse()
+  });
+
+  // Returns both collections last 10 posts in reverse date order
+  config.addCollection('home', collection => {
+    return [...collection.getFilteredByGlob(['./src/notes/*.md'])
+      .filter(
+        item => !item.data.draft
+          && item.date <= new Date()
+      )].reverse().slice(0, 10);
   });
 
   // Only minify HTML if we are in production because it slows builds _right_ down

@@ -9,10 +9,7 @@
   </article>
 
   <section class="home-notes">
-    {% set notesListItems = collections.notes.slice(0, 10) %}
+    {% set notesListItems = collections.home %}
     {% include "partials/notes-list.html" %}
-    <footer class="home-notes__footer">
-      <a href="/notes">More notes</a>
-    </footer>
   </section>
 {% endblock %}

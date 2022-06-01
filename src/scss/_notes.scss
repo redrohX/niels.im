@@ -37,7 +37,16 @@
   }
 
   > * {
-    --flow-space: .75rem;
+    --flow-space: 2rem;
+  }
+}
+
+.note__header {
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 376px) {
+    display: flex;
   }
 }
 
@@ -53,6 +62,16 @@
 
 .note__link {
   font-size: smaller;
+}
+
+.note__link--internal {
+  text-decoration: none;
+  color: var(--base-color);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .note__footer {
