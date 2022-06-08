@@ -2,7 +2,7 @@
 title: Logseq en de kunst van het organiseren van notities
 type: article
 date: '2022-06-08T13:00'
-lang: language
+lang: nl
 tags: ['Logseq', 'Notities', 'PARA']
 permalink: "article/logseq-en-de-kunst-van-het-organiseren-van-notities/"
 ---
