@@ -13,4 +13,4 @@
 [[redirects]]
   from = "/@social"
   to = "https://indieweb.social/@niels"
-  status = 200
+  status = 302
