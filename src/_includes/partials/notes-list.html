@@ -1,25 +1,24 @@
 {% if notesListHeadline %}
-  <h2 class="[ headline ] [ measure-micro ]" data-highlight="primary">
+  <h3 class="[ headline ] [ measure-micro ]" data-highlight="primary">
     {{ notesListHeadline }}
   </h2>
 {% endif %}
-<ol class="notes-list flow">
+<ul class="notes-list flow">
   {% for item in notesListItems %}
   <li class="flow">
-    <article class="note flow" {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}>
-      <header class="note__header">
-        {% if item.data.link %}
-        <h2 class="note__title" id="{{ item.url }}"><a href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h2>
+    <div class="note" {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}>
+        {# {% if item.data.link %}
+        <h3 class="note__title" id="{{ item.url }}"><a href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h3>
         <a class="note__link note__link--internal" href="{{ item.url }}" aria-label="Go to {{item.data.title}} page"><span
           aria-hidden="true">#</span></a>
-        {% else %}
-          <h2 class="note__title"><a class="note__title" href="{{ item.url }}">{{ item.data.title }}</a></h2>
-        {% endif %}
-      </header>
-      <div class="note__body flow">{{ item.data.content | safe }}</div>
-      <footer class="note__footer flow">
-        <div class="note__date">{{ item.data.date | dateFilter }}</div>
-        <div class="note__tags">
+        {% else %} #}
+        <h3 class="note__title"><a class="note__title" href="{{ item.url }}">{{ item.data.title }}</a></h3>
+        {# {% endif %} #}
+        {# <div class="note__date">{{ item.data.date | dateFilter }}</div> #}
+      {# <div class="note__body flow">{{ item.data.content | safe }}</div> #}
+      {# <div class="note__footer flow"> #}
+        {# <div class="note__date">{{ item.data.date | dateFilter }}</div> #}
+        {# <div class="note__tags">
           <ol class="note__tags">
             {% for tag in item.data.tags %}
               <li class="note__tag">
@@ -27,9 +26,9 @@
               </li>
             {% endfor %}
           </ol>
-        </div>
-      </footer>
-    </article>
+        </div> #}
+      {# </div> #}
+    </div>
   </li>
   {% endfor %}
-</ol>
+</ul>

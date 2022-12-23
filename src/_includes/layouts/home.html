@@ -3,12 +3,13 @@
 {% block content %}
   {# Example of fetching external content #}
   {# {% include "partials/studio.html" %} #}
-  <article>
+  <article class="home-intro">
     <h1>{{ title | safe }}</h1>
     {{ content | safe }}
   </article>
 
   <section class="home-notes">
+    <h2>Latest notes</h2>
     {% set notesListItems = collections.home %}
     {% include "partials/notes-list.html" %}
   </section>

@@ -7,8 +7,8 @@ $color-grey-35: #353535;
 
 $font-root-size: 62.5% !default;
 $font-base-size: 1.8rem !default;
-$font-base-family: 'Lato-Medium', sans-serif !default;
-$font-base-family-bold: 'Lato-Bold', sans-serif !default;
+$font-base-family: 'IBM Plex Mono', sans-serif !default;
+$font-base-family-bold: $font-base-family !default;
 $font-base-family-italic: 'Lato-Medium-Italic', sans-serif !default;
 $font-base-family-bolditalic: 'Lato-Bold-Italic', sans-serif !default;
 
