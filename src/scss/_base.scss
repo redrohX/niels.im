@@ -63,8 +63,10 @@ a {
 }
 
 code {
-  background: aquamarine;
+  background: hsl(228deg 100% 96%);
   padding: 0 0.1em;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono';
 
   @media (prefers-color-scheme: dark) {
     color: var(--body-background-color);
@@ -250,4 +252,14 @@ ol.footnotes-list {
 .pagination {
   display: flex;
   justify-content: space-between;
+}
+
+.full-width {
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
 }

@@ -1,7 +1,13 @@
 @use "config";
 
-.notes-list{
+.notes-list {
   --flow-space: 2.5rem;
+
+  > li::marker {
+    color: var(--base-color);
+    content: "~ ";
+    font-weight: 700;
+  }
 }
 
 .note {
@@ -24,7 +30,6 @@
 }
 
 .note__title {
-  display: inline-block;
   font-weight: bold;
 }
 
@@ -56,8 +61,7 @@
 .note__tags {
   display: flex;
   gap: 1rem;
-  margin: 0;
   list-style: none;
-  font-size: smaller;
+  font-size: small;
   font-weight: bold;
 }

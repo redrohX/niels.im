@@ -21,7 +21,9 @@ const isProduction = process.env.NODE_ENV === 'production';
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 module.exports = config => {
-  const markdownLib = markdownIt()
+  const markdownLib = markdownIt({
+    html: true,
+  })
     .use(markdownItImageLazyLoading, {
       image_size: true,
       decoding: true,
