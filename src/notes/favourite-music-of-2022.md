@@ -5,6 +5,8 @@ date: '2022-12-24T23:21'
 lang: en
 tags: ['Music', '2022']
 ---
+_Last updated 25-12 11:55: The other albums of 2022 added_
+
 2022 has been a great year for music for me personally. I've discovered a lot of great new artists, bands and albums. I've gotten into new genres and went to a lot of concerts (50 acts!) too. There was a lot of metal, but it's also the year where I really started digging into the endless catalogue of music by John Zorn. Where I started listening to Dutch artists like S10 and Froukje and where I've buried my head deep into death-metal and got kind of bored with most black-metal.
 
 How did I create my top 10 of favorite albums? First I made a long list of about 70 albums that I really liked this year. I went through everything I saved in Apple Music, all the stuff I bought on Bandcamp and physical formats like vinyl. Then I sorted everything by hand. Went through the list multiple times. Listened to albums, reordered the list and did this for about a week. In the end I ended up with the list below. Is it my final list? Right now it is, but on different days, with different moods, the order might still change somewhat 🤷.
