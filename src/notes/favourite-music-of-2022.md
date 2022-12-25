@@ -196,3 +196,67 @@ How did I create my top 10 of favorite albums? First I made a long list of about
         </ol>
     </div>
 </div>
+
+## The other albums of 2022
+
+11. High Castle Teleorkestra - _The Egg That Never Opened_
+    - The new band from the musicians behind Estradasphere, Mr. Bungle, Secret Chiefs 3 and Farmers Market.
+1. Charlotte Wessels - _Tales from Six Feet Under Vol. II_
+    - I'm so impressed by the quality of songs Charlotte releases every month, for two years in a row already.
+1. S10 - _Ik Besta Voor Altijd Zolang Jij Aan Mij Denkt_
+    - Probably the first and last time I feature a Eurovision songfestival candidate in my end of year list. File S10 with Froukje and Eefje under my favorite Dutch artists singing in Dutch.
+1. Orville Peck - _Bronco_
+    - Orville's Elvis sounding voice might sound a little gimmicky in the beginning, but all songs on _Bronco_ are of the highest quality here.
+1. Besvärjelsen - _Atlas_
+    - Swedish stoner meets grunge meets occult rock. Strong vocals and songs. You might have missed this one.
+1. Mother of Graves - _Where the Shadows Adorn_
+    - This is the album for you if you miss Katatonia's _Brave Murder Day_ sound.
+1. Terzij de Horde - _In One Of These, I Am Your Enemy_
+    - This grew a lot on me in the last few days. The two very long songs might look a little intimidating, but this is not your cookiecutter atmospheric black-metal with boring 15 minutes songs. Not at all!
+1. Faceless Burial - _At the Foothills of Deliration_
+    - This technical old-school death-metal goes in a lot of directions. Not an easy listen, but highly rewarding.
+1. An Abstract Illusion - _Woe_
+    - Perhaps this one needs to grow a little more. The progressive death-metal here is great and has the potential to move up some places.
+1. Autonoesis - _Moon of Foul Magics_
+    - A very impressive blend of black/thrash is what these guys are playing.
+1. Imperial Triumphant - _Spirit of Ecstasy_
+1. Zola Jesus - _Arkhon_
+1. Negative Plane - _The Pact_
+1. tricot - _不出来 (Fudeki)_
+1. Misþyrming - _Með hamri_
+1. Reeking Aura - _Blood and Bonemeal_
+1. Oceans of Slumber - _Starlight And Ash_
+1. Holy Fawn - _Dimensional Bleed_
+1. Amorphis - _Halo_
+1. Psychonaut - _Violate Consensus Reality_
+1. The Callous Daoboys - _Celebrity Therapist_
+1. Obsidious - _Iconic_
+1. Everything Everything - _Raw Data Feel_
+1. Black Lung - _Dark Waves_
+1. Wilderun - _Epigone_
+1. Sylvaine - _Noire_
+1. Cult of Luna - _The Long Road North_
+1. Black Map - _Melodoria_
+1. The Halo Effect - _Days of the Lost_
+1. In Aphelion - _Moribund_
+    - Lot's of shredding, solo's and awesome guitar playing on this impressive and melodic black/death metal album with some thrash/black 'n roll influences.
+1. The Gathering - _Beautiful Distortion_
+1. Cloud Rat - _Threshold_
+1. Druids - _Shadow Work_
+1. Hath - _All That Was Promised_
+1. Aeternam - _Heir of the Rising Sun_
+1. Vorbid - _A Swansong By The Edge of Mandala_
+1. thoughtcrimes - _Altered Pasts_
+1. Altars - _Ascetic Reflection_
+    - Dissonant death-metal from Australia, different from Ulcerate. Taking this sound somewhere else.
+1. Mizmor & Thou - _Myopia
+1. Verberis - _Adumbration of the Veiled Logos_
+1. Ghost - _Impera_
+1. Kelly Lee Owens - _LP8_
+1. Nils Frahm - _Music For Animals_
+1. Devil Master - _Ecstasies of Never Ending Night_
+    - A successful combination of Black-metal, deathrock and punk. Between this and Negative Plane you have heard the best of this genre in 2022.
+1. Moon Tooth - _Phototroph_
+1. Immolation - _Acts of God_
+1. Katharos XIII - _Chthonian Transmissions_
+    - Doom-metal with saxophone and ethereal vocals. It's slow and moody and feels a little long sometimes, but pretty good still.
