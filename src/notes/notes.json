@@ -1,4 +1,4 @@
 {
   "layout": "layouts/note.html",
-  "permalink": "/note/{{ page.filePathStem }}/index.html"
+  "permalink": "/note/{{ page.fileSlug }}/index.html"
 }
