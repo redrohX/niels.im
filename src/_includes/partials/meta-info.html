@@ -1,5 +1,8 @@
-{% set pageTitle = title + ' - ' + site.name %}
-
+{% if title %}
+  {% set pageTitle = title + ' - ' + site.name %}
+{% else %}
+{% set pageTitle = page.date | w3DateFilter %}
+{% endif %}
 {# We don't want any duplication. This is likely for the home page. #}
 {% if site.name === title %}
   {% set pageTitle = title %}

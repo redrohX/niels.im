@@ -54,20 +54,20 @@ module.exports = config => {
   config.addPlugin(rssPlugin);
 
   // Returns articles items, sorted by display order
-  config.addCollection('articles', collection => {
-    return collection.getAll()
-      .filter(
-        item => !item.data.draft
-          && item.data.published !== false
-          && !item.data.deleted
-          && item.date <= new Date()
-          && item.data.type === 'article'
-      ).reverse()
-  });
+  // config.addCollection('articles', collection => {
+  //   return collection.getAll()
+  //     .filter(
+  //       item => !item.data.draft
+  //         && item.data.published !== false
+  //         && !item.data.deleted
+  //         && item.date <= new Date()
+  //         && item.data.type === 'article'
+  //     ).reverse()
+  // });
 
   // Returns a collection of notes in reverse date order
-  config.addCollection('notes', collection => {
-    return [...collection.getFilteredByGlob('./src/notes/*.md')
+  config.addCollection('articles', collection => {
+    return [...collection.getFilteredByGlob('./src/articles/*.md')
     .filter(
       item => !item.data.draft
         && item.data.published !== false
@@ -79,7 +79,7 @@ module.exports = config => {
 
   // Returns both collections last 10 posts in reverse date order
   config.addCollection('home', collection => {
-    return [...collection.getFilteredByGlob(['./src/notes/*.md'])
+    return [...collection.getFilteredByGlob(['./src/articles/*.md', './src/notes/*.md'])
       .filter(
         item => !item.data.draft
           && item.data.published !== false
