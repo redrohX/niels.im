@@ -58,6 +58,8 @@ module.exports = config => {
     return collection.getAll()
       .filter(
         item => !item.data.draft
+          && item.data.published !== false
+          && !item.data.deleted
           && item.date <= new Date()
           && item.data.type === 'article'
       ).reverse()
@@ -68,6 +70,8 @@ module.exports = config => {
     return [...collection.getFilteredByGlob('./src/notes/*.md')
     .filter(
       item => !item.data.draft
+        && item.data.published !== false
+        && !item.data.deleted
         && item.date <= new Date()
         // && item.data.type !== 'article'
     )].reverse()
@@ -78,6 +82,8 @@ module.exports = config => {
     return [...collection.getFilteredByGlob(['./src/notes/*.md'])
       .filter(
         item => !item.data.draft
+          && item.data.published !== false
+          && !item.data.deleted
           && item.date <= new Date()
       )].reverse().slice(0, 10);
   });
