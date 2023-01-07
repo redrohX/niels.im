@@ -1,9 +1,4 @@
 ---
 date: 2023-01-07T10:31:07.909Z
-title: Title test
-excerpt: Summ test
-visibility: public
-mp-syndicate-to:
-  - https://indieweb.social/@niels
+deleted: 2023-01-07T11:07:17.102Z
 ---
-Content test
