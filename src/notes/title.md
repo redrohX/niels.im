@@ -1,0 +1,1 @@
+{"type":"entry","post-type":"article","name":"Title","content":{"html":"<p>Content</p>","text":"Content"},"summary":"summ","visibility":"public","post-status":"published","mp-syndicate-to":["https://indieweb.social/@niels"],"mp-slug":"title","published":"2023-01-07T10:41:50.049Z","url":"https://niels.im/notes/title"}
