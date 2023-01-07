@@ -1,10 +1,10 @@
 ---
 date: 2023-01-07T11:24:39.286Z
-updated: 2023-01-07T11:55:52.574Z
+updated: 2023-01-07T11:56:45.926Z
 title: My first syndicated post with Indiekit
 visibility: public
-mp-syndicate-to:
-  - https://indieweb.social/@niels
+syndication:
+  - https://indieweb.social/@niels/109647797013861938
 ---
 It took some effort, but I have [Indiekit](https://getindiekit.com/) in some basic form running on a VPS. Which makes it possible to publish posts with Micropub on my personal website and (optionally) syndicate these posts to Mastodon (and Twitter, but I don’t know anyone who is using this).
 
