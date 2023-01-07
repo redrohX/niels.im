@@ -1,0 +1,1 @@
+{"type":"entry","post-type":"article","name":"Moar test","content":{"html":"<p>Moar content</p>","text":"Moar content"},"summary":"Moar summary","visibility":"public","post-status":"published","mp-syndicate-to":["https://indieweb.social/@niels"],"mp-slug":"moar-test","published":"2023-01-07T10:36:35.035Z","url":"https://niels.im/notes/moar-test"}
