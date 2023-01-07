@@ -1,9 +1,8 @@
 ---
 date: 2023-01-07T11:24:39.286Z
-updated: 2023-01-07T11:40:50.137Z
+updated: 2023-01-07T11:55:52.574Z
 title: My first syndicated post with Indiekit
-published: false
-visibility: unlisted
+visibility: public
 mp-syndicate-to:
   - https://indieweb.social/@niels
 ---
