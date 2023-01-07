@@ -2,43 +2,23 @@
   {% for item in notesListItems %}
   <li class="flow">
     <div class="note">
-        {# {% if item.data.link %}
-        <h3 class="note__title" id="{{ item.url }}"><a href="{{ item.data.link }}" rel="noopener">{{ item.data.title }}</a></h3>
-        <a class="note__link note__link--internal" href="{{ item.url }}" aria-label="Go to {{item.data.title}} page"><span
-          aria-hidden="true">#</span></a>
-        {% else %} #}
-          {% if item.data.title %}
-            <h3 class="note__title">
-              <a {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}
-                class="note__title"
-                href="{{ item.url }}">{{ item.data.title }}</a>
-            </h3>
-          {% else %}
-            <div class="note__small">
-              <strong>
-                <a class=""
-                 href="{{ item.url }}">
-                  <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-                </a>
-              </strong>
-              {{ item.data.content | safe }}
-            </div>
-          {% endif %}
-        {# {% endif %} #}
-        {# <div class="note__date">{{ item.data.date | dateFilter }}</div> #}
-      {# <div class="note__body flow">{{ item.data.content | safe }}</div> #}
-      {# <div class="note__footer flow"> #}
-        {# <div class="note__date">{{ item.data.date | dateFilter }}</div> #}
-        {# <div class="note__tags">
-          <ol class="note__tags">
-            {% for tag in item.data.tags %}
-              <li class="note__tag">
-                <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
-              </li>
-            {% endfor %}
-          </ol>
-        </div> #}
-      {# </div> #}
+      {% if item.data.title %}
+        <h3 class="note__title">
+          <a {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}
+            class="note__title"
+            href="{{ item.url }}">{{ item.data.title }}</a>
+        </h3>
+      {% else %}
+        <div class="note__small">
+          <h3>
+            <a class=""
+              href="{{ item.url }}">Note:
+              <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateTimeFilter }}</time>
+            </a>
+          </h3>
+          {{ item.data.content | safe }}
+        </div>
+      {% endif %}
     </div>
   </li>
   {% endfor %}

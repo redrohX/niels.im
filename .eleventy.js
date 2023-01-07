@@ -9,7 +9,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 // Filters
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
-const webMentionsFilters = require('./src/filters/webmentions')
+const dateTimeFilter = require('./src/filters/date-time-filter.js');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -40,14 +40,11 @@ module.exports = config => {
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
+  config.addFilter('dateTimeFilter', dateTimeFilter);
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/fonts/');
   config.addFilter('log', value => {
     console.log(value)
-  })
-
-  Object.keys(webMentionsFilters).forEach(filterName => {
-    config.addFilter(filterName, webMentionsFilters[filterName])
   })
 
   // Plugins
