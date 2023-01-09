@@ -1,10 +1,4 @@
 ---
 date: 2023-01-09T17:46:31.128Z
-title: Retiring Pinafore
-bookmark-of: https://nolanlawson.com/2023/01/09/retiring-pinafore/
-published: false
-visibility: public
-mp-syndicate-to:
-  - https://indieweb.social/@niels
+deleted: 2023-01-09T17:54:22.935Z
 ---
-Pinafore was a pretty cool Mastodon client. Sad to see it go, but some great insights into the development of this app.
