@@ -2,13 +2,24 @@
   {% for item in notesListItems %}
   <li class="flow">
     <div class="note">
-      {% if item.data.title %}
-        <h3 class="note__title">
+      {# Bookmarks #}
+      {% if (item.data.title) and (item.data['bookmark-of']) %}
+        <div class="note__small">
+          <h3>
+            <a class=""
+              href="{{ item.data['bookmark-of'] }}">{{ item.data.title }}</a>
+          </h3>
+          {{ item.data.content | safe }}
+        </div>
+      {# Articles #}
+      {% elif (item.data.title) and not (item.data['bookmark-of']) %}
+        <h3>
           <a {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}
             class="note__title"
             href="{{ item.url }}">{{ item.data.title }}</a>
         </h3>
       {% else %}
+      {# Notes #}
         <div class="note__small">
           <h3>
             <a class=""
