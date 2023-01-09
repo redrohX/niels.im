@@ -27,7 +27,7 @@ permalink: '/feed.xml'
       ]]></content>
     </entry>
 	{% endfor %}
-  {% for post in collections.notes %}
+  {% for post in collections.rss %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
