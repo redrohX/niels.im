@@ -41,6 +41,9 @@ module.exports = config => {
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('dateTimeFilter', dateTimeFilter);
+  config.addNunjucksFilter("getVarFromString", function(varName) {
+    return this.getVariables()[varName];
+  });
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/fonts/');
   config.addFilter('log', value => {

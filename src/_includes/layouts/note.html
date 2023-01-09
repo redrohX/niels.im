@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
+{% set bookmarkOf = 'bookmark-of' | getVarFromString %}
 
 {# Render note date and any tags that this note has been filed under #}
 {% set pageHeaderSummary %}
@@ -11,7 +12,9 @@
 <article class="note flow" {% if lang %}lang="{{lang}}"{% endif %}>
   <header>
     {% if link %}
-    <h1 class="note__title"><a class="note__title" href="{{ link }}" rel="noopener">{{ title }}</a></h1>
+      <h1 class="note__title"><a class="note__title" href="{{ link }}" rel="noopener">{{ title }}</a></h1>
+    {% elif bookmarkOf %}
+      <h1 class="note__title"><a class="note__title" href="{{ bookmarkOf  }}" rel="noopener">{{ title }}</a></h1>
     {% else %}
       <h1 class="note__title">{{ title }}</h1>
     {% endif %}
