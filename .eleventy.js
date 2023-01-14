@@ -2,6 +2,7 @@
 const markdownIt = require("markdown-it");
 const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
 const markdownItFootnote = require('markdown-it-footnote')
+const markdownItHashtag = require('markdown-it-hashtag')
 
 // RSS
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
@@ -29,12 +30,17 @@ module.exports = config => {
       decoding: true,
       base_path: __dirname + '/src/',
     })
-    .use(markdownItFootnote);
+    .use(markdownItFootnote)
+    .use(markdownItHashtag);
 
   markdownLib.renderer.rules.footnote_block_open = () => (
     '<section class="footnotes">\n' +
     '<ol class="footnotes-list">\n'
   );
+  markdownLib.renderer.rules.hashtag_open  = function(tokens, idx) {
+    var tagName = tokens[idx].content.toLowerCase();
+    return '<a class="note__hashtag" href="/tag/' + tagName + '">';
+  }
   config.setLibrary("md", markdownLib);
 
   // Add filters

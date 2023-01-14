@@ -1,7 +1,7 @@
 ---
 title: Orville Peck - Bronco
 date: '2022-05-26T10:50'
-tags: ['Music', 'Now Playing']
+tags: ['Music', 'NowPlaying']
 link: https://songwhip.com/orville-peck/bronco
 lang: en
 ---

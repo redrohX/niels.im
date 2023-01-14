@@ -1,7 +1,7 @@
 ---
 title: Everything Everything - Raw Data Feel
 date: '2022-05-28T11:00'
-tags: ['Now Playing', 'Music']
+tags: ['NowPlaying', 'Music']
 link: https://songwhip.com/everything-everything/raw-data-feel
 lang: nl-nl
 ---
