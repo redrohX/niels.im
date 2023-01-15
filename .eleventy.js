@@ -37,10 +37,16 @@ module.exports = config => {
     '<section class="footnotes">\n' +
     '<ol class="footnotes-list">\n'
   );
-  markdownLib.renderer.rules.hashtag_open  = function(tokens, idx) {
-    var tagName = tokens[idx].content.toLowerCase();
-    return '<a class="note__hashtag" href="/tag/' + tagName + '">';
+  markdownLib.renderer.rules.hashtag_open = () => {
+    // var tagName = tokens[idx].content.toLowerCase();
+    // return '<a class="note__hashtag" href="/tag/' + tagName + '">';
+    return ''; // Filters the hashtags from the post
   }
+  markdownLib.renderer.rules.hashtag_text  = () => {
+    return '';
+  }
+  markdownLib.renderer.rules.hashtag_close = () => { return ''; }
+
   config.setLibrary("md", markdownLib);
 
   // Add filters

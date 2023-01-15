@@ -2,7 +2,7 @@
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
-{% set postListItems = pagination.items %}
+{% set postListItems = collections.all %}
 
 {# If this is a tag, grab those items instead as one large collection #}
 {% if tag %}

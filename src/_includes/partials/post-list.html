@@ -4,9 +4,15 @@
   </h2>
 {% endif %}
 <ol class="post-list">
-  {% for item in postListItems %}
-  <li>
-    <a href="{{ item.url }}">{{ item.data.title }}</a>
-  </li>
+  {% for item in postListItems | reverse %}
+    {% if item.data.title %}
+      <li>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+    {% else %}
+      <a class=""
+        href="{{ item.url }}"><time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateTimeFilter }}</time>
+      </a>
+    {% endif %}
   {% endfor %}
 </ol>

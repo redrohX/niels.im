@@ -55,12 +55,8 @@
 .note__tags {
   display: flex;
   gap: 1rem;
+  margin: 0;
   list-style: none;
-  font-size: small;
-  font-weight: bold;
-}
-
-.note__hashtag {
   font-size: smaller;
   font-weight: bold;
 }

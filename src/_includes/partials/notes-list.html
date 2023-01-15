@@ -13,21 +13,37 @@
         </div>
       {# Articles #}
       {% elif (item.data.title) and not (item.data['bookmark-of']) %}
-        <h3>
-          <a {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}
-            class="note__title"
-            href="{{ item.url }}">{{ item.data.title }}</a>
-        </h3>
+        <div>
+          <h3>
+            <a {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}
+              class="note__title"
+              href="{{ item.url }}">{{ item.data.title }}</a>
+          </h3>
+          {% if item.data.tags %}
+            <div class="note__tags">
+              <strong>Tagged:</strong>
+              {% for tag in item.data.tags %}
+                <a href="/tag/{{ tag | slug }}/">{{ tag | title | replace(' ', '') }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
       {% else %}
       {# Notes #}
         <div>
           <h3>
             <a class=""
-              href="{{ item.url }}">Note:
-              <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateTimeFilter }}</time>
+              href="{{ item.url }}"><time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateTimeFilter }}</time>
             </a>
           </h3>
           {{ item.data.content | safe }}
+          {% if item.data.tags %}
+            <div class="note__tags">
+              <strong>Tagged:</strong>
+              {% for tag in item.data.tags %}
+                <a href="/tag/{{ tag | slug }}/">{{ tag | replace(' ', '') }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       {% endif %}
     </div>

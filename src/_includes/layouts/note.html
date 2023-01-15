@@ -11,12 +11,16 @@
 {% block content %}
 <article class="note flow" {% if lang %}lang="{{lang}}"{% endif %}>
   <header>
-    {% if link %}
-      <h1 class="note__title"><a class="note__title" href="{{ link }}" rel="noopener">{{ title }}</a></h1>
-    {% elif bookmarkOf %}
-      <h1 class="note__title"><a class="note__title" href="{{ bookmarkOf  }}" rel="noopener">{{ title }}</a></h1>
+    {% if title %}
+      {% if link %}
+        <h1 class="note__title"><a class="note__title" href="{{ link }}" rel="noopener">{{ title }}</a></h1>
+      {% elif bookmarkOf %}
+        <h1 class="note__title"><a class="note__title" href="{{ bookmarkOf  }}" rel="noopener">{{ title }}</a></h1>
+      {% else %}
+        <h1 class="note__title">{{ title }}</h1>
+      {% endif %}
     {% else %}
-      <h1 class="note__title">{{ title }}</h1>
+      <h1 class="note__title"><time datetime="{{ date | w3DateFilter }}">{{ date | dateTimeFilter }}</time></h1>
     {% endif %}
   </header>
   <div class="note__body flow">{{ content | safe }}</div>
