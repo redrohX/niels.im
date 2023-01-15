@@ -4,7 +4,7 @@
     <div class="note">
       {# Bookmarks #}
       {% if (item.data.title) and (item.data['bookmark-of']) %}
-        <div class="note__small">
+        <div>
           <h3>
             <a class=""
               href="{{ item.data['bookmark-of'] }}">{{ item.data.title }}</a>
@@ -20,7 +20,7 @@
         </h3>
       {% else %}
       {# Notes #}
-        <div class="note__small">
+        <div>
           <h3>
             <a class=""
               href="{{ item.url }}">Note:

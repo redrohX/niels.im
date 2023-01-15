@@ -2,12 +2,6 @@
 
 .notes-list {
   --flow-space: 2.5rem;
-
-  > li::marker {
-    color: var(--base-color);
-    content: "~ ";
-    font-weight: 700;
-  }
 }
 
 .note {
@@ -64,10 +58,6 @@
   list-style: none;
   font-size: small;
   font-weight: bold;
-}
-
-.note__small {
-  font-size: smaller;
 }
 
 .note__hashtag {

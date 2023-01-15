@@ -35,8 +35,8 @@ a {
 
   color: var(--link-color);
   text-decoration-color: var(--link-underline-color);
-  text-decoration-thickness: .24em;
-  text-underline-offset: .3em;
+  text-decoration-thickness: .1em;
+  text-underline-offset: .2em;
 
   @media (prefers-color-scheme: dark) {
     --link-color: #{config.$color-text-dark};
