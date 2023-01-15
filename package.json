@@ -29,7 +29,7 @@
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-hashtag": "^0.4.0",
     "markdown-it-image-lazy-loading": "^1.2.0",
-    "moment": "^2.29.3",
+    "moment": "^2.29.4",
     "sass": "^1.52.1"
   }
 }
