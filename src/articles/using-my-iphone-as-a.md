@@ -1,10 +1,11 @@
 ---
 date: 2023-01-28T10:51:17.717Z
+updated: 2023-01-28T10:53:25.210Z
 title: Using my iPhone as a webcam with Continuity Camera
 excerpt: I bought Belkin's iPhone mount with MagSafe for desktops and displays to try out Apple's Continuity Camera feature.
 visibility: public
-mp-syndicate-to:
-  - https://indieweb.social/@niels
+syndication:
+  - https://indieweb.social/@niels/109766456449856202
 ---
 I finally updated my work Macbook to Ventura. The only reason why I wanted to risk breaking my local dev environment is that I grabbed Belkin's iPhone mount with MagSafe for desktops and displays (that's quite a mouth full, but it's how they named it). It's a bit pricey (€45) for what is basically a magnet, but it fits fine on top of my LG screen. Better than my current external webcam, which created a small notch. 
 
