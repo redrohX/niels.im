@@ -2,7 +2,7 @@
 date: 2023-01-17T18:16:26.545Z
 title: Two ways to test Angular components with Storybook
 excerpt: At work I've been looking at the possibility of moving our Angular component tests to Storybook with test runner, but I'm not sure if this is the right way to go for us.
-published: true
+published: false
 visibility: public
 mp-syndicate-to:
   - https://indieweb.social/@niels
