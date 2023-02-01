@@ -2,12 +2,12 @@
 date: 2023-01-17T18:16:26.545Z
 title: Two ways to test Angular components with Storybook
 excerpt: At work I've been looking at the possibility of moving our Angular component tests to Storybook with test runner, but I'm not sure if this is the right way to go for us.
-published: false
+published: true
 visibility: public
 mp-syndicate-to:
   - https://indieweb.social/@niels
 ---
-At work I've been looking at the possibility of moving our Angular component tests to Storybook. The [Storybook test runner](https://github.com/storybookjs/test-runner) uses **Jest** as a runner, and **Playwright** as a testing framework. Each one of our `.stories` files would then be transformed into a `spec` file, and each story becomes a test, which is run in a headless browser. 
+At work I've been looking at the possibility of moving our Angular component tests to Storybook. The [Storybook test runner](https://github.com/storybookjs/test-runner) uses **Jest** as a runner, and **Playwright** as a testing framework. Each one of our `.stories` files would then be transformed into a `spec` file, and each story becomes a test, which is run in a headless browser.
 
 Test Runner also easily integrates with the Storybook UI by installing the [interactions add-on](https://storybook.js.org/addons/@storybook/addon-interactions). The whole idea makes a lot of sense. Write your stories and then create tests inside these stories that makes use of all the defined properties and scenarios.
 

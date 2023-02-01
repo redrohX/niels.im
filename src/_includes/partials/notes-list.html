@@ -4,7 +4,7 @@
     <div class="note">
       {# Bookmarks #}
       {% if (item.data.title) and (item.data['bookmark-of']) %}
-        <div>
+        <div class="flow">
           <h3>
             <a class=""
               href="{{ item.data['bookmark-of'] }}">{{ item.data.title }}</a>
@@ -13,7 +13,7 @@
         </div>
       {# Articles #}
       {% elif (item.data.title) and not (item.data['bookmark-of']) %}
-        <div>
+        <div class="flow">
           <h3>
             <a {% if item.data.lang %}lang="{{item.data.lang}}"{% endif %}
               class="note__title"
@@ -27,9 +27,18 @@
               {% endfor %}
             </div>
           {% endif %}
+      {# Reply #}
+      {% elif (item.data.title) and (item.data['in-reply-to']) %}
+        <div class="flow">
+          <h3>
+            <a class=""
+              href="{{ item.data['in-reply-to'] }}">{{ item.data.title }}</a>
+          </h3>
+          {{ item.data.content | safe }}
+        </div>
       {% else %}
       {# Notes #}
-        <div>
+        <div class="flow">
           <h3>
             <a class=""
               href="{{ item.url }}"><time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateTimeFilter }}</time>
