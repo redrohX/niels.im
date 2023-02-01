@@ -1,11 +1,11 @@
 ---
 date: 2023-02-01T15:11:12.363Z
-updated: 2023-02-01T17:15:37.992Z
+updated: 2023-02-01T17:17:08.419Z
 title: Modern Health, frameworks, performance, and harm
 bookmark-of: https://ericwbailey.website/published/modern-health-frameworks-performance-and-harm/
 visibility: public
-mp-syndicate-to:
-  - https://indieweb.social/@niels
+syndication:
+  - https://indieweb.social/@niels/109790614541058519
 ---
 As a front-end developer working on a similar type of web application in the mental health care space, Eric Bailey's article about performance of modern front-end frameworks really hit home.
     
