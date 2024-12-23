@@ -1,0 +1,13 @@
+[build]
+	publish = "_site"
+	command = "yarn build"
+
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://indieweb.social/.well-known/webfinger?resource=acct:niels@indieweb.social"
+  status = 200
+
+[[redirects]]
+  from = "/@social/*"
+  to = "https://indieweb.social/@niels/:splat"
+  status = 302
