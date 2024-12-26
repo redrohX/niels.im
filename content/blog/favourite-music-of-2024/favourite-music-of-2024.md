@@ -4,11 +4,11 @@ date: '2024-12-26'
 lang: en
 tags: ['music', '2024', 'end of year list']
 ---
-End of the year means I go through the endless amount of albums I've listened to in the last year and pick my favourites. I must admit that it has become quite a daunting task with the increasing amount of releases that came out throughout the year. I'm quite well organized, if I like an album I at least add it to my library in Apple Music, or buy it physical or digital. I rip everything that I own to FLAC and add it to my personal library on my NAS so I can listen to it with Plexamp.
+End of the year means I go through the endless amount of albums I've listened to in the last year and pick my favourites. I must admit that it has become quite a daunting task with the increasing amount of releases every year. I'm quite well organized, if I like an album I at least add it to my library in Apple Music, or buy it physical or digital. I rip everything that I own to FLAC and add it to my personal library on my NAS so I can listen to it with Plexamp.
 
 Anyway, I went through my collection and wrote down my favourite albums. But creating a chart is a thankless task. I like a lot of different music, mostly adjacent to metal, but I can't put a pop record above a dissonant death-metal album. I listen to both genres at different moods or times. One is not better than the other, both are good within their own boundaries or genres.
 
-So I've kind of created my own categories this year. A category is not always a genre or sub-genre, but something else that binds the albums. But sometimes it _is_ a genre. So without further ado, these are my favourite albums of 2024.
+So I've kind of created my own categories this year. A category is not always a genre or sub-genre, but something else that binds the albums. But sometimes it _is_ a genre (🤷). So without further ado, these are my favourite albums of 2024.
 
 ---
 
@@ -32,7 +32,7 @@ To my surprise **Gåte** came out for Norway at the Eurovision songfestival, and
 1. **Het Universumpje** - Stilleven Met Dierentemmer
 1. **Froukje** - Noodzakelijk Verdriet
 
-The Dutch language has never really lent itself to the music I listened to, but in the last couple of years that has changed. Mostly due to a young generation of artists within different genres. The Dutch black-metal scene around Utrecht has been going strong for years already, **Vuur & Zijde** spun out of that scene. **Eefje de Visser** is not exactly new, but her way of using the language in her songs has been pretty unique, and is an inspiration for a lot of artists. **Het Universumpje** is what you get when Spinvis and Queens Of The Stone Age make a baby, while Froukje is a talent pur sang.
+The Dutch language has never really lent itself to the music I listened to, but in the last couple of years that has changed. Mostly due to a young generation of artists within different genres. The Dutch black-metal scene around Utrecht has been going strong for years already, **Vuur & Zijde** spun out of that scene. **Eefje de Visser** is not exactly new, but her way of using the language in her songs has been pretty unique, and is an inspiration for a lot of artists. **Het Universumpje** is what you get when **Spinvis** and **Queens Of The Stone Age** make a baby, while **Froukje** is a talent pur sang.
 
 ## What if Portishead played metal
 1. **Oranssi Pazuzu** - Muuntautuja
@@ -118,7 +118,7 @@ Maybe it's debatable if there really is a new wave of thrash-metal bands. I mean
 1. **Pallbearer** - Minds Burns Alive
 1. **MEER** - Wheels Within Wheels
 1. **Beth Gibbons** - Lives Outgrown
-1. Sinistro - Vértice
+1. **Sinistro** - Vértice
 1. **Hamferð** - Men Guðs hond er sterk
 1. **Big Brave** - A Chaos Of Flowers
 
