@@ -5,7 +5,7 @@ export default {
 	description: "Blogging about music, running and web development",
 	author: {
 		name: "Niels van Rongen",
-		email: "youremailaddress@example.com",
+		email: "blog@niels.im",
 		url: "https://niels.im/about/"
 	}
 }
