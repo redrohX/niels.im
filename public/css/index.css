@@ -123,9 +123,6 @@ img[src$=".svg"] {
   max-width: none;
 }
 
-p:last-child {
-	margin-bottom: 0;
-}
 p {
 	line-height: 1.5;
 }
@@ -155,6 +152,10 @@ main :first-child {
 
 header {
 	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+iframe {
+	margin-bottom: 1.2em;
 }
 
 .links-nextprev {
