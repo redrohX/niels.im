@@ -10,6 +10,10 @@ import pluginFilters from "./_config/filters.js";
 export default async function(eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if (data.draft) {
+			data.title = `${data.title} (draft)`;
+		}
+
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
@@ -26,17 +30,26 @@ export default async function(eleventyConfig) {
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
-	// Watch content images for the image pipeline.
-	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+	// Watch CSS files
+	eleventyConfig.addWatchTarget("css/**/*.css");
+	// Watch images for the image pipeline.
+	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
 	// Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
-	// Adds the {% css %} paired shortcode
+	// Bundle <style> content and adds a {% css %} paired shortcode
 	eleventyConfig.addBundle("css", {
 		toFileDirectory: "dist",
+		// Add all <style> content to `css` bundle (use <style eleventy:ignore> to opt-out)
+		// Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
+		bundleHtmlContentFromSelector: "style",
 	});
-	// Adds the {% js %} paired shortcode
+
+	// Bundle <script> content and adds a {% js %} paired shortcode
 	eleventyConfig.addBundle("js", {
 		toFileDirectory: "dist",
+		// Add all <script> content to the `js` bundle (use <script eleventy:ignore> to opt-out)
+		// Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
+		bundleHtmlContentFromSelector: "script",
 	});
 
 	// Official plugins
@@ -74,19 +87,23 @@ export default async function(eleventyConfig) {
 
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		// File extensions to process in _site folder
-		extensions: "html",
-
 		// Output formats for each image.
 		formats: ["avif", "webp", "auto"],
 
 		// widths: ["auto"],
 
-		defaultAttributes: {
-			// e.g. <img loading decoding> assigned on the HTML tag will override these values.
-			loading: "lazy",
-			decoding: "async",
-		}
+		failOnError: false,
+		htmlOptions: {
+			imgAttributes: {
+				// e.g. <img loading decoding> assigned on the HTML tag will override these values.
+				loading: "lazy",
+				decoding: "async",
+			}
+		},
+
+		sharpOptions: {
+			animated: true,
+		},
 	});
 
 	// Filters
